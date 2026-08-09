@@ -91,23 +91,4 @@ export const featuredWorks = [
   },
 ];
 
-export const articles = [
-  {
-    date: "2026.06",
-    title: "为什么复杂业务需要「可被验证的判断」",
-    excerpt: "流程不能替代判断，但好的系统能让判断被看见、被复用。",
-    slug: "why-verifiable-judgment",
-  },
-  {
-    date: "2026.05",
-    title: "AI 质检落地：从 demo 到 3 万门店",
-    excerpt: "LLM 工程化的四个坑，以及我们怎么一个一个填平。",
-    slug: "ai-qc-at-scale",
-  },
-  {
-    date: "2026.04",
-    title: "三方价值模型：平台、门店与车主如何对齐",
-    excerpt: "SOP 不是管控工具，而是利益链条的重新设计。",
-    slug: "three-party-value",
-  },
-];
+// 文章数据已迁移至 src/data/articles.ts（从 content/articles/*.md 解析）

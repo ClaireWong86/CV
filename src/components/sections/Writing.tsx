@@ -1,6 +1,10 @@
-import { articles } from "../../data/content";
+import { useState } from "react";
+import { marked } from "marked";
+import { articles } from "../../data/articles";
 
 export function Writing() {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
   return (
     <section id="writing" className="section section--warm writing">
       <div className="section__inner">
@@ -19,20 +23,37 @@ export function Writing() {
         </div>
 
         <div className="writing__list">
-          {articles.map((article) => (
-            <a
-              key={article.slug}
-              href={`#writing-${article.slug}`}
-              className="writing__item"
-            >
-              <span className="writing__date">{article.date}</span>
-              <div className="writing__body">
-                <h3 className="writing__title">{article.title}</h3>
-                <p className="writing__excerpt">{article.excerpt}</p>
-              </div>
-              <span className="writing__arrow" aria-hidden="true">→</span>
-            </a>
-          ))}
+          {articles.map((article) => {
+            const isOpen = expanded === article.slug;
+            return (
+              <article key={article.slug} className="writing__entry">
+                <button
+                  type="button"
+                  className="writing__item"
+                  onClick={() => setExpanded(isOpen ? null : article.slug)}
+                  aria-expanded={isOpen}
+                >
+                  <span className="writing__date">{article.date}</span>
+                  <div className="writing__body">
+                    <h3 className="writing__title">{article.title}</h3>
+                    <p className="writing__excerpt">{article.excerpt}</p>
+                  </div>
+                  <span className="writing__arrow" aria-hidden="true">
+                    {isOpen ? "↑" : "→"}
+                  </span>
+                </button>
+                {isOpen && (
+                  <div
+                    className="writing__article"
+                    // 内容来自本仓库受控的 Markdown 文件，无用户输入
+                    dangerouslySetInnerHTML={{
+                      __html: marked.parse(article.body, { async: false }),
+                    }}
+                  />
+                )}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
