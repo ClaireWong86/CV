@@ -14,6 +14,7 @@ export const site = {
   nav: [
     { id: "metrics", label: "数据" },
     { id: "cases", label: "案例" },
+    { id: "ai", label: "AI 工程化" },
     { id: "writing", label: "写作" },
     { id: "about", label: "关于" },
     { id: "contact", label: "联系" },

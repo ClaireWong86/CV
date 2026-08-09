@@ -11,7 +11,11 @@ export const profile = {
   skills: [
     {
       category: "产品能力",
-      items: ["B 端产品", "AI 工程化", "业务架构", "规则引擎", "低代码平台", "SOP 设计"],
+      items: ["B 端产品", "业务架构", "规则引擎", "低代码平台", "SOP 设计"],
+    },
+    {
+      category: "AI 工程化",
+      items: ["LLM / VLM", "Prompt 工程", "评测集设计", "人机协同", "Agent Skill", "VibeCoding"],
     },
     {
       category: "工具技能",
@@ -69,8 +73,9 @@ export const profile = {
       highlights: [
         "恶意回复漏查率从 91% → 0%，拦截率提升至 6.3%",
         "核销不规范率从 1.69% → 0.61%，降幅 63.9%",
+        "配套建设独立评测集、人工复核台与策略配置产品，形成「评测-复核-回流」质量闭环",
       ],
-      tech: ["LLM", "Agent", "JoyAI-750B"],
+      tech: ["LLM", "Agent", "JoyAI-750B", "评测集", "人机协同"],
     },
     {
       name: "京东养车商户版 SOP 链路重构",
