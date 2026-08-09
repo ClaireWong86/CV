@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 resume.pdf
+
+# 本地面试准备材料，不公开
+/docs/interview-prep.md
