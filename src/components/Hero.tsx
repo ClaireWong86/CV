@@ -22,10 +22,21 @@ export function Hero() {
             <a href="#contact" className="btn btn--ghost-light">联系我 →</a>
           </div>
         </div>
-        <div className="hero__visual" aria-hidden="true">
-          <div className="hero__visual-frame">
-            <span className="hero__visual-label">Untitled · 2026</span>
-          </div>
+        <div className="hero__visual">
+          <figure className="hero__visual-frame">
+            <img
+              className="hero__visual-img"
+              src={`${import.meta.env.BASE_URL}hero-tire-ai.jpg`}
+              alt="AI 轮胎诊断：胎面磨损、花纹深度、胎侧裂纹、鼓包变形、DOT 与异常偏磨识别"
+              width={1200}
+              height={1600}
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption className="hero__visual-label">
+              AI Tire Diagnosis · 2026
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>

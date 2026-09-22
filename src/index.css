@@ -357,21 +357,39 @@ em {
 }
 
 .hero__visual-frame {
+  position: relative;
   aspect-ratio: 4 / 5;
-  background:
-    radial-gradient(80% 70% at 30% 20%, rgba(188, 155, 106, 0.08) 0%, transparent 60%),
-    linear-gradient(160deg, #16140f 0%, var(--dark-bg-deep) 100%);
+  margin: 0;
+  background: var(--dark-bg-deep);
   border: 1px solid var(--border-dark);
-  display: flex;
-  align-items: flex-end;
-  padding: 1.25rem;
+  overflow: hidden;
+}
+
+.hero__visual-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
 }
 
 .hero__visual-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.75rem 1.25rem 1.15rem;
   font-size: 0.6875rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--dark-muted);
+  color: rgba(242, 234, 220, 0.88);
+  background: linear-gradient(
+    to top,
+    rgba(5, 5, 4, 0.82) 0%,
+    rgba(5, 5, 4, 0.35) 55%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 /* ── Metrics ── */
