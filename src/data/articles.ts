@@ -1,5 +1,5 @@
 // 文章源文件在 content/articles/*.md，frontmatter + Markdown 正文
-import aiQcRaw from "../../content/articles/ai-qc-at-scale.md?raw";
+import vlmAntiHallucinationRaw from "../../content/articles/vlm-anti-hallucination.md?raw";
 import observeJudgeRaw from "../../content/articles/observe-then-judge.md?raw";
 
 export interface Article {
@@ -33,6 +33,6 @@ function parseArticle(slug: string, raw: string): Article {
 }
 
 export const articles: Article[] = [
-  parseArticle("ai-qc-at-scale", aiQcRaw),
+  parseArticle("vlm-anti-hallucination", vlmAntiHallucinationRaw),
   parseArticle("observe-then-judge", observeJudgeRaw),
 ];
