@@ -6,8 +6,7 @@ export const profile = {
   email: "clairewang8696@gmail.com",
   phone: "17717298696",
   links: [] as { label: string; url: string }[],
-  about:
-    "资深 B 端产品经理，专注 AI 工程化与复杂业务架构。具备 LLM & Agent 实战经验，精于解决模型输出稳定性与场景落地难题；擅长非标业务建模，通过动线重构将线下黑盒转化为数字化确定性管控；主导 TCA 规则引擎，通过逻辑解耦实现业务快速响应与系统高复用。",
+  about: "",
   skills: [
     {
       category: "产品能力",
