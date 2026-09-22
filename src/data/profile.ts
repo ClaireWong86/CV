@@ -18,7 +18,7 @@ export const profile = {
     },
     {
       category: "工具技能",
-      items: ["Figma", "SQL", "GQL", "Tableau", "Python", "Agent"],
+      items: ["Figma", "SQL", "GQL", "Tableau", "Agent"],
     },
     {
       category: "爱好",
