@@ -1,5 +1,6 @@
 // 文章源文件在 content/articles/*.md，frontmatter + Markdown 正文
 import vlmAntiHallucinationRaw from "../../content/articles/vlm-anti-hallucination.md?raw";
+import llmEvalThenTuneRaw from "../../content/articles/llm-eval-then-tune.md?raw";
 import observeJudgeRaw from "../../content/articles/observe-then-judge.md?raw";
 
 export interface Article {
@@ -33,6 +34,7 @@ function parseArticle(slug: string, raw: string): Article {
 }
 
 export const articles: Article[] = [
+  parseArticle("llm-eval-then-tune", llmEvalThenTuneRaw),
   parseArticle("vlm-anti-hallucination", vlmAntiHallucinationRaw),
   parseArticle("observe-then-judge", observeJudgeRaw),
 ];
